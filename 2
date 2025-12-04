@@ -1,0 +1,9 @@
+_G.targetName = { "Shadow", "Developer", "Angel", "Golem", "Orc", "Minotaur", "Dragonborn", "Dwarf", "Demon", "Zombie", "Orc Lord", "Undead", "Human", "Elf", "Goblin" } -- Shadow, Developer, Angel, Golem, Orc, Minotaur, Dragonborn, Dwarf, Demon, Zombie, Orc Lord, Undead, Human, Elf, Goblin
+
+repeat task.wait(.1) until game:IsLoaded()
+local Players = game:GetService("Players")
+local plr = Players.LocalPlayer
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Shared = ReplicatedStorage:WaitForChild("Shared")
+local Reroll = Shared.Packages.Knit.Services.RaceService.RF.Reroll
+local RedeemCode = Shared.Packages.Knit.Services.CodeService.RF.RedeemCode
