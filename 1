@@ -12,6 +12,12 @@ local Knit = require(Shared.Packages.Knit)
 local PlayerController = Knit.GetController("PlayerController")
 local Replica = PlayerController.Replica
 
+local messages = "Auto Reroll Complete: ".. Replica.Data.Race .. " Reroll Left: ".. Replica.Data.Spins
+_G.Horst_SetDescription(messages)
+
+local Knit = require(Shared.Packages.Knit)
+local PlayerController = Knit.GetController("PlayerController")
+local Replica = PlayerController.Replica
 local Pickaxes = {}
 local Gold
 while true do
