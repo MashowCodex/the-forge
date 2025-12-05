@@ -21,7 +21,7 @@ while true do
             if Equipments.Items.Pickaxe[item.Name] then table.insert(Pickaxes, item.Name) end
         end
     end
-    _G.Horst_SetDescription("Race: " .. Replica.Data.Race .. ", ⛏️ Pickaxes: " .. table.concat(Pickaxes, ", ") .. ", 💰 Gold: " .. string.format("%d", Gold))
+    _G.Horst_SetDescription("❤ Race: " .. Replica.Data.Race .. ", ⛏️ Pickaxes: " .. table.concat(Pickaxes, ", ") .. ", 💰 Gold: " .. string.format("%d", Gold))
     table.clear(Pickaxes)
     task.wait(10)
 end
