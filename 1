@@ -12,12 +12,6 @@ local Knit = require(Shared.Packages.Knit)
 local PlayerController = Knit.GetController("PlayerController")
 local Replica = PlayerController.Replica
 
-local messages = "Auto Reroll Complete: ".. Replica.Data.Race .. " Reroll Left: ".. Replica.Data.Spins
-_G.Horst_SetDescription(messages)
-
-local Knit = require(Shared.Packages.Knit)
-local PlayerController = Knit.GetController("PlayerController")
-local Replica = PlayerController.Replica
 local Pickaxes = {}
 local Gold
 while true do
@@ -27,7 +21,7 @@ while true do
             if Equipments.Items.Pickaxe[item.Name] then table.insert(Pickaxes, item.Name) end
         end
     end
-    _G.Horst_SetDescription("⛏️ Pickaxes: " .. table.concat(Pickaxes, ", ") .. ", 💰 Gold: " .. string.format("%d", Gold))
+    _G.Horst_SetDescription("Race: " .. Replica.Data.Race .. ", ⛏️ Pickaxes: " .. table.concat(Pickaxes, ", ") .. ", 💰 Gold: " .. string.format("%d", Gold))
     table.clear(Pickaxes)
     task.wait(10)
 end
