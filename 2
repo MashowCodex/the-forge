@@ -22,6 +22,6 @@ while Replica.Data.Spins > 0 and task.wait(.1) do
     Reroll:InvokeServer()
 end
 
-local messages = "Auto Reroll Complete: ".. Replica.Data.Race .. " Reroll Left: ".. Replica.Data.Spins
+local messages = "Auto Reroll Complete: "..Replica.Data.Race..(table.find(_G.targetName, Replica.Data.Race) and " ⭐" or "").." Reroll Left: "..Replica.Data.Spins
 _G.Horst_SetDescription(messages)
 _G.Horst_AccountChangeDone()
